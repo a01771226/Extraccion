@@ -22,25 +22,24 @@ df1
 
 filtro4=df1.loc[["2022-11-22","'2022-12-23"], ["SUBTOTAL_PARTIDA"]]
 filtro4
+filtro4.to_csv("Entregable4.csv")
 
 filtro5=df.head(8)
 filtro5
+filtro5.to_csv("Entregable5.csv")
 
 filtro6=df[df["SUBTOTAL_PARTIDA"] > 77000]
 filtro6
+filtro6.to_csv("Entregable6.csv")
 
 filtro7=df[(df["SUBTOTAL_PARTIDA"] > 77000) & (df["FECHA_DOC"] == "2022-05-24")]
 filtro7
+filtro7.to_csv("Entregable7.csv")
 
 filtro8=df[(df["SUBTOTAL_PARTIDA"] > 77000)| (df["FECHA_DOC"] == "2022-05-24")]
 filtro8
+filtro8.to_csv("Entregable8.csv")
 
 filtro9=df[~(df["SUBTOTAL_PARTIDA"] > 77000) & ~(df["FECHA_DOC"] == "2022-05-24")]
 filtro9
-
-filtro4.to_csv("Entregable4.csv")
-filtro5.to_csv("Entregable5.csv")
-filtro6.to_csv("Entregable6.csv")
-filtro7.to_csv("Entregable7.csv")
-filtro8.to_csv("Entregable8.csv")
 filtro9.to_csv("Entregable9.csv")
